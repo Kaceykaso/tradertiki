@@ -1,0 +1,230 @@
+/* BODY 🧍‍♂️ */
+body {
+    /* Colors 🎨 */
+    background: #7D9C60;
+    color: #2F2D29;
+    /* Space 🪐 */
+    margin: 0 auto;
+    padding: 0;
+    /* Fonts 🔤 */
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+/* HEADER 💀 */
+
+header {
+    display: flex;
+    height: 4vh;
+    width: 100vw;
+    /* Colors 🎨 */
+    background: #FD9496;
+    color: #486C57;
+    border-bottom: 3px solid #E1C049;
+    box-shadow: 1px 1px 3px 1px #486C57;
+    /* Space 🪐 */
+    margin: 0 auto;
+    margin-bottom: 3.5em;
+    margin-top: 0;
+    padding: 0.5em 1em;
+    /* Flexing 💪 */
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+}
+
+header h1 {
+    font-size: 3vh;
+    text-shadow: 2px 2px 4px #DBD4BE;
+}
+
+header h1.subtitle,
+section h2 {
+    color: #AB553A;
+}
+
+ /* CONTENT 📖 */
+
+ section {
+    padding: 1em;
+    height: 100%;
+    width: 90vw;
+ }
+
+ p {
+    margin: 0 0 1em;
+ }
+
+ section.cards,
+ section.cards .card,
+ section.cards .card .chooser {
+    display: flex;
+    flex-flow: row wrap;
+ }
+
+ section.cards {
+    align-items: center;
+    height: 100%;
+    margin: 0 auto;
+    padding: 1vh 2vw;
+    width: 90%;
+ }
+
+ section.cards .card {
+    /* Colors 🎨 */
+    background: #61514A;
+    border: solid 1px #AB553A;
+    box-shadow: 0.25em 0.25em 0.25em #2F2D29;
+    color: #E1C049;
+    /* Space 🪐 */
+    border-radius: 0.25em;
+    height: 100%;
+    margin-bottom: 1vh;
+    padding: 1.5vh;
+    width: 100%;
+ }
+
+ section.cards .card.title {
+    /* Colors 🎨 */
+    background: none;
+    border: none;
+    box-shadow: none;
+    /* Space 🪐 */
+    margin-bottom: 0;
+    padding: 0;
+ }
+
+ section.cards .card.left {
+    align-items: flex-start;
+    flex-direction: column;
+ }
+
+ section.cards .card.right {
+    padding: 5vh 2vw;
+    align-items: center;
+    justify-content: space-around;
+ }
+
+ section.cards .chooser input[type="text"] {
+    width: 25vw;
+ }
+
+ /* FOOTER 🦶 */
+
+ footer#footer {
+    bottom: 0;
+    display: flex;
+    /* Space 🪐 */
+    height: 3em;
+    position: absolute;
+    width: 100vw;
+    /* Flexing 💪 */
+    align-content: flex-end;
+    align-items: flex-end;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+ }
+
+ footer ul {
+    display: flex;
+    /* Space 🪐 */
+    padding: 0;
+    /* Flexing 💪 */
+    align-content: flex-end;
+    align-items: flex-end;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+ }
+
+ footer ul li {
+    list-style: none;
+    margin: 0 1em;
+ }
+
+ /* TYPOGRAPHY 🔤 */
+
+ h1, h2, h3, h4, h5, h6 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-kerning: normal;
+ }
+
+ section.cards h2 {
+    font-size: 8vw;
+    margin-bottom: -2vw;
+ }
+
+ /* FORMS 📝 */
+
+ button, input {
+    color: #2F2D29;
+ }
+
+ button {
+    background: #FC9092;
+    border: 2px solid #E1C049;
+ }
+
+ input {
+    background: #DBD4BE;
+    border: none;
+ }
+
+ .chooser input {
+    border-radius: 0.25em 0 0 0.25em;
+ }
+
+ .chooser button {
+    border-radius: 0 0.25em 0.25em 0;
+ }
+
+ button#spinner {
+    /* Space 🪐 */
+    border-radius: 50%;
+    height: 10vh;
+    margin: 0 auto;
+    position: relative;
+    width: 10vh;
+    /* Fonts 🔤 */
+    font-size: 4vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+ }
+
+ button#spinner:hover {
+    animation: spin;
+    animation-duration: 300ms;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);;
+    transform: rotate(180deg);
+ }
+
+ button#spinner:not(:hover) {
+    animation: spinout;
+    animation-duration: 300ms;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ }
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes spinout {
+    from {
+        transform: rotate(180deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+
+
+
+
