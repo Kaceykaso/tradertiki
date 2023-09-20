@@ -1,4 +1,24 @@
+/**
+    Trader Tiki
+	[TBD].com | @kaceykaso
+	GNU GPL 3.0 license
+
+COLOR PALETTE
+-------------
+Pink:          #FD9496
+Bright Green:  #599458
+Pale Green:    #7D9C60
+Forest Green:  #486C57
+Slate Teal:    #97B5A0
+Cream:         #DBD4BE
+Yellow:        #E1C049
+Rust:          #AB553A
+Dirt:          #61514A
+Dark Brown:    #2F2D29
+**/
+
 /* BODY 🧍‍♂️ */
+
 body {
     /* Colors 🎨 */
     background: #7D9C60;
@@ -206,6 +226,8 @@ section h2 {
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
  }
 
+ /* ANIMATIONS 📺 */
+ 
 @keyframes spin {
     from {
         transform: rotate(0deg);
