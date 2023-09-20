@@ -33,6 +33,10 @@ body {
 
 /* HEADER 💀 */
 
+p {
+   margin: 0 auto;
+}
+
 header {
     display: flex;
     height: 4vh;
@@ -54,10 +58,6 @@ header {
 }
 
  /* CONTENT 📖 */
-
- p {
-    margin: 3vh 0 1em;
- }
 
  section.main,
  section.main .display,
@@ -107,8 +107,16 @@ header {
    width: 100%;
    /* Flexing 💪 */
    align-items: normal;
-   flex-flow: row nowrap;
-   justify-content: space-between;
+   flex-flow: row wrap;
+   justify-content: space-evenly;
+ }
+
+ section.main .display .chooser {
+   margin-right: 1vw;
+ }
+
+ section.main .display * {
+   margin: 2vh 0;
  }
 
  /* FOOTER 🦶 */
@@ -195,13 +203,14 @@ h2.subtitle {
 
  button#spinner {
     /* Space 🪐 */
+    align-self: center;
     border-radius: 50%;
-    height: 10vh;
+    height: 7vh;
     margin: 0 auto;
     position: relative;
-    width: 10vh;
+    width: 7vh;
     /* Fonts 🔤 */
-    font-size: 4vh;
+    font-size: x-large;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
     font-style: italic;
@@ -243,7 +252,12 @@ h2.subtitle {
 }
 
 @keyframes roll-in {
-    
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
 }
 
 
