@@ -33,6 +33,14 @@ spinner.addEventListener('click', () => {
     spin(firstNameBox, lastNameBox);
 });
 
+spinner.addEventListener('touchstart', () => {
+   spinUp(); 
+});
+
+spinner.addEventListener('touchcancel', () => {
+    spinOut();
+});
+
 /**
  * spin: executes logic to populate the input fields on click of the spinner button
  * @param {HTMLInputElement} firstBox - firstNameBox text input from document
@@ -45,6 +53,16 @@ function spin(firstBox, lastBox) {
     // Shove names in boxes
     firstBox.value = firstName;
     lastBox.value = lastName;
+    spinOut();
+}
+
+function spinUp() {
+    spinner.style.transform = 'rotate(180deg)';
+}
+
+function spinOut() {
+    spinner.style.transform = 'rotate(0)';
+    spinner.style.transition = 'transform 0.3s';
 }
 
 /**
