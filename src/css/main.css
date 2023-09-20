@@ -53,80 +53,62 @@ header {
     justify-content: flex-start;
 }
 
-header h1 {
-    font-size: 3vh;
-    text-shadow: 2px 2px 4px #DBD4BE;
-}
-
-header h1.subtitle,
-section h2 {
-    color: #AB553A;
-}
-
  /* CONTENT 📖 */
 
- section {
-    padding: 1em;
-    height: 100%;
-    width: 90vw;
- }
-
  p {
-    margin: 0 0 1em;
+    margin: 3vh 0 1em;
  }
 
- section.cards,
- section.cards .card,
- section.cards .card .chooser {
+ section.main,
+ section.main .display,
+ section.main .display .chooser {
     display: flex;
-    flex-flow: row wrap;
  }
 
- section.cards {
-    align-items: center;
-    height: 100%;
-    margin: 0 auto;
-    padding: 1vh 2vw;
-    width: 90%;
- }
-
- section.cards .card {
+ section.main {
     /* Colors 🎨 */
     background: #61514A;
-    border: solid 1px #AB553A;
     box-shadow: 0.25em 0.25em 0.25em #2F2D29;
+    /* Fancy Borders 💈 */
+    border: solid 20px;
+    border-image: url(../../assets/bamboo-horizontal.png) 20 round;
+    border-image-outset: 4px;
     color: #E1C049;
     /* Space 🪐 */
-    border-radius: 0.25em;
     height: 100%;
-    margin-bottom: 1vh;
-    padding: 1.5vh;
-    width: 100%;
- }
-
- section.cards .card.title {
-    /* Colors 🎨 */
-    background: none;
-    border: none;
-    box-shadow: none;
-    /* Space 🪐 */
-    margin-bottom: 0;
-    padding: 0;
- }
-
- section.cards .card.left {
-    align-items: flex-start;
-    flex-direction: column;
- }
-
- section.cards .card.right {
-    padding: 5vh 2vw;
+    margin: -1vh auto 0;
+    padding: 1vh 2vw;
+    position: relative;
+    width: 90vw;
+    /* Flexing 💪 */
     align-items: center;
-    justify-content: space-around;
+    flex-flow: column nowrap;
  }
 
- section.cards .chooser input[type="text"] {
-    width: 25vw;
+ section.main::before,
+ section.main::after {
+   content: "";
+   background: url(../../assets/bamboo-vertical.png) repeat;
+   position: absolute;
+   height: 110%;
+   top: -20px;
+   width: 20px;
+ }
+
+ section.main::before {
+   left: -30px;
+ }
+
+ section.main::after {
+   right: -30px;
+ }
+
+ section.main .display {
+   width: 100%;
+   /* Flexing 💪 */
+   align-items: normal;
+   flex-flow: row nowrap;
+   justify-content: space-between;
  }
 
  /* FOOTER 🦶 */
@@ -168,9 +150,16 @@ section h2 {
     font-kerning: normal;
  }
 
- section.cards h2 {
-    font-size: 8vw;
-    margin-bottom: -2vw;
+ header h1 {
+   font-size: 3vh;
+   text-shadow: 2px 2px 4px #DBD4BE;
+}
+
+h2.subtitle {
+   color: #AB553A;
+   font-size: 8vw;
+   margin: 0 auto;
+   padding: 0 2vh;
  }
 
  /* FORMS 📝 */
@@ -185,16 +174,23 @@ section h2 {
  }
 
  input {
-    background: #DBD4BE;
+    background-image: linear-gradient(#c0b690, #DBD4BE, #f2eee1, #DBD4BE, #c0b690);
     border: none;
  }
 
  .chooser input {
-    border-radius: 0.25em 0 0 0.25em;
+    /* Space 🪐 */
+    border-radius: 5px 0 0 5px;
+    height: 7vh;
+    padding: 0 1vw 0 3vw;
+    width: 30vw;
+    /* Fonts 🔤 */
+    font-size: 4vw;
+    font-weight: bold;
  }
 
  .chooser button {
-    border-radius: 0 0.25em 0.25em 0;
+    border-radius: 0 5px 5px 0;
  }
 
  button#spinner {
@@ -227,7 +223,7 @@ section h2 {
  }
 
  /* ANIMATIONS 📺 */
- 
+
 @keyframes spin {
     from {
         transform: rotate(0deg);
@@ -244,6 +240,10 @@ section h2 {
     to {
         transform: rotate(0deg);
     }
+}
+
+@keyframes roll-in {
+    
 }
 
 
