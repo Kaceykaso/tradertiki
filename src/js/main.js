@@ -8,18 +8,20 @@ const firstNames = {
     2: "Hula",
     3: "Kon",
     4: "Pacific",
-    5: "Trader",
-    6: "Tiki",
-    7: "Sandcomber",
-    8: "South"
+    5: "Tiki",
+    6: "Trader",
+    7: "Tropical",
+    8: "Sandcomber",
+    9: "South"
 };
 const lastNames = {
     0: "Beach",
-    1: "Island",
-    2: "Sands",
-    3: "Tiki",
-    4: "Tai",
-    5: "Tropics"
+    1: "Balls",
+    2: "Island",
+    3: "Sands",
+    4: "Tiki",
+    5: "Tai",
+    6: "Tropics"
 };
 var firstName, lastName;
 const spinner = document.getElementById("spinner");
