@@ -36,7 +36,7 @@ function spinForNames(firstBox, lastBox) {
 }
 
 function spinUp() {
-    spinner.style.transform = 'rotate(180deg)';ß
+    spinner.style.transform = 'rotate(180deg)';
 }
 
 /**
