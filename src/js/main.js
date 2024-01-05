@@ -9,7 +9,7 @@ let lastNameBox = document.getElementById("lastNameBox");
  * Clicks and clacks
  */
 spinner.addEventListener('click', () => {
-    spin(firstNameBox, lastNameBox);
+    spinForNames(firstNameBox, lastNameBox);
 });
 
 spinner.addEventListener('touchstart', () => {
@@ -21,11 +21,11 @@ spinner.addEventListener('touchcancel', () => {
 });
 
 /**
- * spin: executes logic to populate the input fields on click of the spinner button
+ * spinForNames: executes logic to populate the input fields on click of the spinner button
  * @param {HTMLInputElement} firstBox - firstNameBox text input from document
  * @param {HTMLInputElement} lastBox - lastNameBox text input from document
  */
-function spin(firstBox, lastBox) {
+function spinForNames(firstBox, lastBox) {
     // Grab names
     firstName = firstNames[Math.floor(Math.random() * Object.keys(firstNames).length)];
     lastName = lastNames[Math.floor(Math.random() * Object.keys(lastNames).length)];
@@ -36,9 +36,12 @@ function spin(firstBox, lastBox) {
 }
 
 function spinUp() {
-    spinner.style.transform = 'rotate(180deg)';
+    spinner.style.transform = 'rotate(180deg)';ß
 }
 
+/**
+ * spinOut: executes a spin affect by transforming the element's CSS inline to rotate
+ */
 function spinOut() {
     spinner.style.transform = 'rotate(0)';
     spinner.style.transition = 'transform 0.3s';
