@@ -1,5 +1,33 @@
-import { firstNames, lastNames } from "./names";
-
+/**
+ * Variables and things
+ */
+const firstNames = {
+    0: "Beachbum",
+    1: "Driftwood",
+    2: "Hula",
+    3: "Kon",
+    4: "Pacific",
+    5: "Tiki",
+    6: "Trader",
+    7: "Tropical",
+    8: "Sandcomber",
+    9: "South",
+    10: "Rumrunner",
+    11: "Beachgoer",
+    12: "Rumslinger",
+    13: "The Pirate"
+};
+const lastNames = {
+    0: "Beach",
+    1: "Balls",
+    2: "Island",
+    3: "Sands",
+    4: "Tiki",
+    5: "Tai",
+    6: "Tropics",
+    7: "Pirate",
+    8: "Beard"
+};
 let firstName, lastName;
 let spinner = document.getElementById("spinner");
 let firstNameBox = document.getElementById("firstNameBox");
