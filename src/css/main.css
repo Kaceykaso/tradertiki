@@ -188,7 +188,7 @@ h2.subtitle {
 
  .chooser input {
     /* Space 🪐 */
-    border-radius: 5px 0 0 5px;
+    border-radius: 5px;
     height: 7vh;
     padding: 0 1vw 0 3vw;
     width: 30vw;
