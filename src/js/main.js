@@ -1,32 +1,9 @@
+import { firstNames, lastNames } from "../ts/names";
 
-/**
- * Variables and things
- */
-const firstNames = {
-    0: "Beachbum",
-    1: "Driftwood",
-    2: "Hula",
-    3: "Kon",
-    4: "Pacific",
-    5: "Tiki",
-    6: "Trader",
-    7: "Tropical",
-    8: "Sandcomber",
-    9: "South"
-};
-const lastNames = {
-    0: "Beach",
-    1: "Balls",
-    2: "Island",
-    3: "Sands",
-    4: "Tiki",
-    5: "Tai",
-    6: "Tropics"
-};
-var firstName, lastName;
-const spinner = document.getElementById("spinner");
-const firstNameBox = document.getElementById("firstNameBox");
-const lastNameBox = document.getElementById("lastNameBox");
+let firstName, lastName;
+let spinner = document.getElementById("spinner");
+let firstNameBox = document.getElementById("firstNameBox");
+let lastNameBox = document.getElementById("lastNameBox");
 
 /**
  * Clicks and clacks
