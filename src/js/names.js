@@ -13,6 +13,7 @@ export const firstNames = {
     8: "Sandcomber",
     9: "South"
 };
+
 export const lastNames = {
     0: "Beach",
     1: "Balls",
@@ -21,4 +22,4 @@ export const lastNames = {
     4: "Tiki",
     5: "Tai",
     6: "Tropics"
-};
+};ß

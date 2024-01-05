@@ -1,4 +1,4 @@
-import { firstNames, lastNames } from "../ts/names";
+import { firstNames, lastNames } from "./names";
 
 let firstName, lastName;
 let spinner = document.getElementById("spinner");
@@ -9,7 +9,9 @@ let lastNameBox = document.getElementById("lastNameBox");
  * Clicks and clacks
  */
 spinner.addEventListener('click', () => {
-    spinForNames(firstNameBox, lastNameBox);
+    generateNames(firstNameBox, lastNameBox);
+    if (firstNameBox.value !== "" && lastNameBox.value !== "") spinOut();
+    
 });
 
 spinner.addEventListener('touchstart', () => {
@@ -21,28 +23,57 @@ spinner.addEventListener('touchcancel', () => {
 });
 
 /**
- * spinForNames: executes logic to populate the input fields on click of the spinner button
+ * generateNames: executes logic to populate the input fields on click of the spinner button
  * @param {HTMLInputElement} firstBox - firstNameBox text input from document
  * @param {HTMLInputElement} lastBox - lastNameBox text input from document
  */
-function spinForNames(firstBox, lastBox) {
-    // Grab names
-    firstName = firstNames[Math.floor(Math.random() * Object.keys(firstNames).length)];
-    lastName = lastNames[Math.floor(Math.random() * Object.keys(lastNames).length)];
-    // Shove names in boxes
-    firstBox.value = firstName;
-    lastBox.value = lastName;
-    spinOut();
+const generateNames = (firstBox, lastBox) => {
+    // Get and check names
+    firstName = getName(firstNames);
+    lastName = getName(lastNames);
+
+    if (nameDupeCheck(firstName, lastName) == 0) {
+        // no dupes, good to continue
+        // Shove names in boxes
+        firstBox.value = firstName;
+        lastBox.value = lastName;
+    } else {
+        // not good, try last name again
+        console.log("Found dupes, trying again...")
+        generateNames(firstBox, lastBox);
+    }
+    
 }
 
-function spinUp() {
+const getName = (nameList) => {
+    let name = nameList[Math.floor(Math.random() * Object.keys(nameList).length)];
+
+    // Is name blank or outside the list legnth?
+    if (name !== "" || name <= nameList.length) return name; // all good
+    else return "";
+    console.log("Name failed");
+}
+
+const nameDupeCheck = (name1, name2) => {
+    let check = 0;
+    return name1 !== name2 ? check : check = 1;
+}
+
+/**
+ * Spin Styling
+*/
+
+/**
+ * spinUp: executes a spin affect by transforming the element's CSS inline to rotate
+ */
+const spinUp = () => {
     spinner.style.transform = 'rotate(180deg)';
 }
 
 /**
- * spinOut: executes a spin affect by transforming the element's CSS inline to rotate
+ * spinOut: executs reverse spin transfer to return element to original state
  */
-function spinOut() {
+const spinOut = () => {
     spinner.style.transform = 'rotate(0)';
     spinner.style.transition = 'transform 0.3s';
 }
@@ -50,7 +81,7 @@ function spinOut() {
 /**
  * If document ready, GOOOOOOOOOOOOOOO!
  */
-function ready(fn) {
+const ready = (fn) => {
     if (document.readyState!== 'loading') {
         fn();
     } else {
