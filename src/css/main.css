@@ -202,6 +202,7 @@ h2.subtitle {
  }
 
  button#spinner {
+   box-shadow: 0 9px 1px  #a7944e;
     /* Space 🪐 */
     align-self: center;
     border-radius: 50%;
@@ -216,22 +217,25 @@ h2.subtitle {
     font-style: italic;
  }
 
- button#spinner:hover {
-    animation: spin;
-    animation-duration: 300ms;
-    animation-iteration-count: 1;
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);;
-    transform: rotate(180deg);
- }
-
- button#spinner:not(:hover) {
-    animation: spinout;
-    animation-duration: 300ms;
-    animation-iteration-count: 1;
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ button#spinner:active {
+   animation: push;
+   animation-duration: 300ms;
+   animation-iteration-count: 1;
+   animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
  }
 
  /* ANIMATIONS 📺 */
+
+ @keyframes push {
+   from {
+      box-shadow: 0 9px 1px #a7944e;
+      margin-top: 0;
+   }
+   to {
+      box-shadow: 0 0 0 #a7944e;
+      margin-top: 9px;
+   }
+ }
 
 @keyframes spin {
     from {

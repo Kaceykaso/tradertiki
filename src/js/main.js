@@ -38,16 +38,15 @@ let lastNameBox = document.getElementById("lastNameBox");
  */
 spinner.addEventListener('click', () => {
     generateNames(firstNameBox, lastNameBox);
-    if (firstNameBox.value !== "" && lastNameBox.value !== "") spinOut();
-    
+    //if (firstNameBox.value !== "" && lastNameBox.value !== "") spinOut();
 });
 
 spinner.addEventListener('touchstart', () => {
-   spinUp(); 
+   //spinUp(); 
 });
 
 spinner.addEventListener('touchcancel', () => {
-    spinOut();
+    //spinOut();
 });
 
 /**
@@ -94,14 +93,14 @@ const nameDupeCheck = (name1, name2) => {
 /**
  * spinUp: executes a spin affect by transforming the element's CSS inline to rotate
  */
-const spinUp = () => {
+/*const spinUp = () => {
     spinner.style.transform = 'rotate(180deg)';
 }
 
 /**
  * spinOut: executs reverse spin transfer to return element to original state
  */
-const spinOut = () => {
+/*const spinOut = () => {
     spinner.style.transform = 'rotate(0)';
     spinner.style.transition = 'transform 0.3s';
 }
