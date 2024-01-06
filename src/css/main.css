@@ -246,15 +246,6 @@ h2.subtitle {
     }
 }
 
-@keyframes spinout {
-    from {
-        transform: rotate(180deg);
-    }
-    to {
-        transform: rotate(0deg);
-    }
-}
-
 @keyframes roll-in {
     from {
       transform: translateX(0);
