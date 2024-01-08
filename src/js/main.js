@@ -1,6 +1,10 @@
 /**
- * Variables and things
+ *  Trader Tiki > Tiki Name Generator
+ *	[TBD].com] | @kaceykaso
+ *	GNU GPL 3.0 license
  */
+
+/** Variables and things */
 const firstNames = {
     0: "Beachbum",
     1: "Driftwood",
@@ -33,23 +37,13 @@ let spinner = document.getElementById("spinner");
 let firstNameBox = document.getElementById("firstNameBox");
 let lastNameBox = document.getElementById("lastNameBox");
 
-/**
- * Clicks and clacks
- */
+/** Clicks and clacks */
 spinner.addEventListener('click', () => {
     generateNames(firstNameBox, lastNameBox);
 });
 
-spinner.addEventListener('touchstart', () => {
-   //spinUp(); 
-});
-
-spinner.addEventListener('touchcancel', () => {
-    //spinOut();
-});
-
 /**
- * generateNames: executes logic to populate the input fields on click of the spinner button
+ * generateNames: executes logic to populate the input fields on click of button, does not return anything
  * @param {HTMLInputElement} firstBox - firstNameBox text input from document
  * @param {HTMLInputElement} lastBox - lastNameBox text input from document
  */
@@ -71,15 +65,25 @@ const generateNames = (firstBox, lastBox) => {
     
 }
 
+/**
+ * getName: randomly pulls a single name from the name object provided
+ * @param {object} nameList - firstNameBox text input from document
+ * @returns string - single name, or blank if failed
+ */
 const getName = (nameList) => {
     let name = nameList[Math.floor(Math.random() * Object.keys(nameList).length)];
 
     // Is name blank or outside the list legnth?
     if (name !== "" || name <= nameList.length) return name; // all good
     else return "";
-    console.log("Name failed");
 }
 
+/**
+ * nameDupeCheck: checks if both names provided are duplicates
+ * @param {string} name1 - firstName
+ * @param {string} name2 - lastName
+ * @returns int - 0 if names are not duplicates (success), 1 if duplicates (fail)
+ */
 const nameDupeCheck = (name1, name2) => {
     let check = 0;
     return name1 !== name2 ? check : check = 1;
