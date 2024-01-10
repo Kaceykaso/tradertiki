@@ -33,10 +33,6 @@ body {
 
 /* HEADER 💀 */
 
-p {
-   margin: 0 auto;
-}
-
 header {
     display: flex;
     height: 4vh;
@@ -63,6 +59,10 @@ header {
  section.main .display,
  section.main .display .chooser {
     display: flex;
+ }
+
+ section.main p {
+   width: 100%;
  }
 
  section.main {
@@ -129,10 +129,8 @@ header {
     position: absolute;
     width: 100vw;
     /* Flexing 💪 */
-    align-content: flex-end;
-    align-items: flex-end;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
+    flex-flow: row nowrap;
+    justify-content: center;
  }
 
  footer ul {
@@ -140,10 +138,7 @@ header {
     /* Space 🪐 */
     padding: 0;
     /* Flexing 💪 */
-    align-content: flex-end;
-    align-items: flex-end;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
+    flex-flow: row nowrap;
  }
 
  footer ul li {
