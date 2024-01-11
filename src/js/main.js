@@ -33,21 +33,16 @@ const lastNames = {
     8: "Beard"
 };
 let firstName, lastName;
-let spinner = document.getElementById("spinner");
-let firstNameBox = document.getElementById("firstNameBox");
-let lastNameBox = document.getElementById("lastNameBox");
-
-/** Clicks and clacks */
-spinner.addEventListener('click', () => {
-    generateNames(firstNameBox, lastNameBox);
-});
 
 /**
  * generateNames: executes logic to populate the input fields on click of button, does not return anything
  * @param {HTMLInputElement} firstBox - firstNameBox text input from document
  * @param {HTMLInputElement} lastBox - lastNameBox text input from document
  */
-const generateNames = (firstBox, lastBox) => {
+const generateNames = () => {
+    // Get target inputs
+    let firstNameBox = document.getElementById("firstNameBox");
+    let lastNameBox = document.getElementById("lastNameBox");
     // Get and check names
     firstName = getName(firstNames);
     lastName = getName(lastNames);
