@@ -36,8 +36,6 @@ let firstName, lastName;
 
 /**
  * generateNames: executes logic to populate the input fields on click of button, does not return anything
- * @param {HTMLInputElement} firstBox - firstNameBox text input from document
- * @param {HTMLInputElement} lastBox - lastNameBox text input from document
  */
 const generateNames = () => {
     // Get target inputs
@@ -50,14 +48,13 @@ const generateNames = () => {
     if (nameDupeCheck(firstName, lastName) == 0) {
         // no dupes, good to continue
         // Shove names in boxes
-        firstBox.value = firstName;
-        lastBox.value = lastName;
+        firstNameBox.value = firstName;
+        lastNameBox.value = lastName;
     } else {
         // not good, try last name again
         console.log("Found dupes, trying again...")
-        generateNames(firstBox, lastBox);
+        generateNames(firstNameBox, lastNameBox);
     }
-    
 }
 
 /**

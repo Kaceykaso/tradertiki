@@ -31,6 +31,11 @@ body {
     font-weight: bold;
 }
 
+a {
+   color: black;
+   text-decoration: underline;
+}
+
 /* HEADER 💀 */
 
 header {
@@ -55,14 +60,18 @@ header {
 
  /* CONTENT 📖 */
 
+ h2.subtitle {
+   /* Colors 🎨 */
+   color: #AB553A;
+   /* Space 🪐 */
+   margin: 0 auto;
+   padding: 0 2vh;
+ }
+
  section.main,
  section.main .display,
  section.main .display .chooser {
     display: flex;
- }
-
- section.main p {
-   width: 100%;
  }
 
  section.main {
@@ -112,11 +121,7 @@ header {
  }
 
  section.main .display .chooser {
-   margin-right: 1vw;
- }
-
- section.main .display * {
-   margin: 2vh 0;
+   margin: 2vh 1vw 2vh 0;
  }
 
  /* FOOTER 🦶 */
@@ -124,11 +129,17 @@ header {
  footer#footer {
     bottom: 0;
     display: flex;
+    /* Fonts 🔤 */
+    font-size: 1.5vh;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
     /* Space 🪐 */
     height: 3em;
-    position: absolute;
+    position: fixed;
     width: 100vw;
     /* Flexing 💪 */
+    align-items: center;
     flex-flow: row nowrap;
     justify-content: center;
  }
@@ -159,10 +170,11 @@ header {
 }
 
 h2.subtitle {
-   color: #AB553A;
    font-size: 8vw;
-   margin: 0 auto;
-   padding: 0 2vh;
+ }
+
+ p {
+   font-size: 1.5vh;
  }
 
  /* FORMS 📝 */
@@ -249,6 +261,24 @@ h2.subtitle {
       transform: translateX(100%);
     }
 }
+
+ /* RESPONSIVE 📱 */
+ @media screen and (min-width: 50px) and (max-width: 650px) {
+   section.main {
+      margin-top: 10px;
+   }
+
+   section.main .display {
+      flex-flow: column;
+      align-items: center;
+   }
+   section.main .display .chooser {
+      margin: 0.5vh 0;
+   }
+   footer#footer ul li {
+      margin: 0 0.5vh;
+   }
+ }
 
 
 
